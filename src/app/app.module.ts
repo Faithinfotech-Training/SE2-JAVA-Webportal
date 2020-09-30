@@ -3,11 +3,11 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { WebCourseComponent } from './webportal/web-course/web-course.component';
+import { WebCourseComponent } from './webportal/web-course/web-course.component';
 import { WebportalComponent } from './webportal/webportal.component';
-// import { WebResourceComponent } from './webportal/web-resource/web-resource.component';
-// import { WebCourseEnquiryFormComponent } from './webportal/web-course/web-course-enquiry-form/web-course-enquiry-form.component';
-// import { AddResourceEnquiryComponent } from './webportal/add-resource-enquiry/add-resource-enquiry.component';
+import { WebResourceComponent } from './webportal/web-resource/web-resource.component';
+import { WebCourseEnquiryFormComponent } from './webportal/web-course/web-course-enquiry-form/web-course-enquiry-form.component';
+import { AddResourceEnquiryComponent } from './webportal/add-resource-enquiry/add-resource-enquiry.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,10 +21,10 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     WebportalComponent,
-    // WebCourseComponent,
-    // WebResourceComponent,
-    // WebCourseEnquiryFormComponent,
-    // AddResourceEnquiryComponent
+    WebCourseComponent,
+    WebResourceComponent,
+    WebCourseEnquiryFormComponent,
+    AddResourceEnquiryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     Ng2SearchPipeModule,
-    OrderModule,
+    OrderModule
     
 
   ],
