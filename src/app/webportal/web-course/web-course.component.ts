@@ -94,6 +94,44 @@ export class WebCourseComponent implements OnInit {
     this.config.currentPage = event;
   }
 
+ //When Enquire Button is pressed. openEnquiry Modal is opened and displays the customer input form
+ openEnquiryModal(template:TemplateRef<any>,course:Course){
+  this.SelectedCourse = course;
+  console.log(this.SelectedCourse);
+  this.courseEnquiryService.form={
+    registrationId:null,
+    courseId: {
+      courseId: this.SelectedCourse.courseId,
+      courseName: this.SelectedCourse.courseName,
+      description: this.SelectedCourse.description,
+      fees: this.SelectedCourse.fees,
+      scoreCriteria: this.SelectedCourse.scoreCriteria,
+      ageCriteria: this.SelectedCourse.ageCriteria,
+      duration: this.SelectedCourse.duration,
+      domain: this.SelectedCourse.domain,
+      access:this.SelectedCourse.access,
+      status: this.SelectedCourse.status,
+      qualifications:this.SelectedCourse.qualifications
+  },
+    customerId:{
+      customerId:null,
+      customerName:'',
+      customerEmailId:'',
+      customerPercentage:'',
+      customerDOB:'',
+      customerPhoneNumber:'',
+      customerQualification:'',
+      leadSource:''
+    },
+    enquiryDate: new Date().toISOString().slice(0, 10).replace('T', ' '),
+    enquiryStatus:this.enquiryStatus
+  };
+  
+  this.modalRef=this.modalService.show(
+    template
+    );
+}
+
 }
 
 
