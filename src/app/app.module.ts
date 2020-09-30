@@ -3,9 +3,9 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { WebCourseComponent } from './webportal/web-course/web-course.component';
+ import { WebCourseComponent } from './webportal/web-course/web-course.component';
 import { WebportalComponent } from './webportal/webportal.component';
-// import { WebResourceComponent } from './webportal/web-resource/web-resource.component';
+ import { WebResourceComponent } from './webportal/web-resource/web-resource.component';
 // import { WebCourseEnquiryFormComponent } from './webportal/web-course/web-course-enquiry-form/web-course-enquiry-form.component';
 // import { AddResourceEnquiryComponent } from './webportal/add-resource-enquiry/add-resource-enquiry.component';
 import { RouterModule } from '@angular/router';
@@ -22,7 +22,7 @@ import { ToastrModule } from 'ngx-toastr';
     AppComponent,
     WebportalComponent,
     // WebCourseComponent,
-    // WebResourceComponent,
+    WebResourceComponent,
     // WebCourseEnquiryFormComponent,
     // AddResourceEnquiryComponent
   ],
